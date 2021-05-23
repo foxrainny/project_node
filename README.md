@@ -1,10 +1,10 @@
 # project_node 
 
 ```
-코드 수정
-git stash
-git pull --rebase
-git stash pop
-커밋
-git push
+1. 코드 수정
+2. git stash
+3. git pull --rebase
+4. git stash pop
+5. 커밋
+6. git push
 ```
