@@ -11,7 +11,6 @@ const Main = () =>
             </div>
             <div> <Location /> </div>
         </div>
-    
         )
 }
 
