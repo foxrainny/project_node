@@ -1,41 +1,18 @@
-import React, { useState } from 'react';
+import Location from './location'
+import '../App.css'
+import dinner from '../img/dinner.jpg'
 
-const Location = () =>
+const Main = () =>
 {
-const [lat, setLat] = useState(null);
-const [lng, setLng] = useState(null);
-const [status, setStatus] = useState(null);
-
-const getLocation = () => {
-    if (!navigator.geolocation) {
-        setStatus('Geolocation is not supported by your browser');
-    } else {
-        setStatus('Locating...');
-        navigator.geolocation.getCurrentPosition((position) => {
-        setStatus(null);
-        setLat(position.coords.latitude);
-        setLng(position.coords.longitude);
-        fetch('주소', {
-            method: 'post',
-            body: JSON.stringify({
-            latitude: position.coords.latitude,
-            longtitude: position.coords.longtitude
-            })
-        })
-        }, () => {
-        setStatus('Unable to retrieve your location');
-        });
-    }
-}
-
     return (
-    <div className="App">
-        <button onClick={getLocation}>Get Location</button>
-        <h1>현재 위치를 알려주세요 !(버튼 클릭)</h1>
-        <p>{status}</p>
-        {lat && <p>Latitude: {lat}</p>}
-        {lng && <p>Longitude: {lng}</p>}
-    </div>
-    );
+        <div>
+            <div className="container">  
+                <img src={dinner} width="200" height="200"/>
+            </div>
+            <div> <Location /> </div>
+        </div>
+    
+        )
 }
-  export default Location;
+
+export default Main;

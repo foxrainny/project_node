@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Location from '/components/main.js';
+import Main from './components/main.js';
 
 const App = () => {
-  return {Location};
+  return <Main/>;
 }
 
 export default App;
