@@ -6,10 +6,10 @@ const Main = () =>
 {
     return (
         <div>
-            <div className="container">  
-                <img src={dinner} width="200" height="200"/>
+            <div className="container">
+                <img className="image-dinner" src={dinner} width="400" height="400"/>
+                <div className="main-box"> <Location /> </div>
             </div>
-            <div> <Location /> </div>
         </div>
         )
 }

@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-
+import Printscreen from './print';
 
 const Location = () =>
 {
@@ -23,7 +23,7 @@ const getLocation = () => {
     if (!navigator.geolocation) {
         setStatus('Geolocation is not supported by your browser');
     } else {
-        setStatus('잠시만 기다려주세요 !');
+        setStatus('추천 음식점 검색중 ! !');
         navigator.geolocation.getCurrentPosition((position) => {
         setStatus(null);
         setLat(position.coords.latitude);
@@ -42,14 +42,14 @@ const getLocation = () => {
         });
     }
 }
-
     return (
     <div className="App">
-        <h1>오늘의 추천 음식은 ?</h1>
+        {!lat && <h1>오늘의 점심은 ?!</h1>}
         <button onClick={getLocation}>추천 받기</button>
         <p>{status}</p>
-        {lat && <p>Latitude: {lat}</p>}
-        {lng && <p>Longitude: {lng}</p>}
+        {/*lat && <p>Latitude: {lat}</p>*/}
+        {/*lng && <p>Longitude: {lng}</p>*/}
+        {lat && <Printscreen lat={lat} lng={lng}/>}        
     </div>
     );
 }
