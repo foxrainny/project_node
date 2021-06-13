@@ -40,9 +40,9 @@
 .container {
   text-align: center;
   margin: 40px;
-  height: 80vh;
+  height: 200vh;
   overflow: hidden;
-  background-color: rgb(165, 166, 199);
+  background-color: rgb(255, 255, 255);
 }
 
 .image-dinner{
@@ -51,10 +51,15 @@
 
 body{
   height: 100%;
-  background-color: rgb(170, 111, 224);
+  background-color: rgb(255, 224, 227);
 }
 
 .main-box{
   height: 40px;
   text-align: center;
+}
+
+#mymap{
+  position: absolute;
+  left: 30%;
 }

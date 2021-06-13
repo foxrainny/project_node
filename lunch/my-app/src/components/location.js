@@ -8,6 +8,7 @@ const [lng, setLng] = useState(null);
 const [status, setStatus] = useState(null);
 
 const componentDidMount = () => {
+    console.log(lat, lng);
     fetch('http://localhost:3001/api_v1', {
         method: "POST",
         headers: {
@@ -28,8 +29,7 @@ const getLocation = () => {
         setStatus(null);
         setLat(position.coords.latitude);
         setLng(position.coords.longitude);
-        componentDidMount()
-        console.log("hi");
+        
         fetch('주소', {
             method: 'post',
             body: JSON.stringify({
@@ -47,9 +47,8 @@ const getLocation = () => {
         {!lat && <h1>오늘의 점심은 ?!</h1>}
         <button onClick={getLocation}>추천 받기</button>
         <p>{status}</p>
-        {/*lat && <p>Latitude: {lat}</p>*/}
-        {/*lng && <p>Longitude: {lng}</p>*/}
-        {lat && <Printscreen lat={lat} lng={lng}/>}        
+        {lat && lng && componentDidMount()}
+        {lat && lng && <Printscreen lat={lat} lng={lng}/>}
     </div>
     );
 }
