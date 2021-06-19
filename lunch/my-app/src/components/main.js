@@ -7,7 +7,7 @@ const Main = () =>
     return (
         <div>
             <div className="container">
-                <img className="image-dinner" src={dinner} width="300" height="300"/>
+                {/*<img className="image-dinner" src={dinner} width="300" height="300"/>*/}
                 <div className="main-box"> <Location /> </div>
             </div>
         </div>

@@ -44,10 +44,19 @@ const getLocation = () => {
 }
     return (
     <div className="App">
-        {!lat && <h1>오늘의 점심은 ?!</h1>}
-        <button onClick={getLocation}>추천 받기</button>
-        <p>{status}</p>
+        {<div className="main-banner"> 오늘의 점심 추천</div>}
+        {!lat ? <button onClick={getLocation} className='main-button'>
+            <div className="banner-font">추천 받기</div>
+        </button> :
+        <button onClick={getLocation} className='main-button'>
+        <div className="banner-font">다시 추천 받기</div>
+        </button>
+        }
+        <div className="loading">{status}</div>
         {lat && lng && componentDidMount()}
+        {lat && 
+            <div className="recommend-result"> 오늘의 음식점은 "호호호" 입니다 ~!
+            </div>}
         {lat && lng && <Printscreen lat={lat} lng={lng}/>}
     </div>
     );

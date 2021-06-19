@@ -40,7 +40,7 @@
 .container {
   text-align: center;
   margin: 40px;
-  height: 200vh;
+  height: 140vh;
   overflow: hidden;
   background-color: rgb(255, 255, 255);
 }
@@ -62,4 +62,53 @@ body{
 #mymap{
   position: absolute;
   left: 30%;
+}
+
+@font-face {
+  font-family: 'SDSamliphopangche_Outline';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-banner{
+  font-family: 'SDSamliphopangche_Outline';
+  font-size: 600%;
+  margin: 100px;
+}
+
+.main-button{
+  border: 1px solid skyblue; 
+  background-color: rgba(0,0,0,0); 
+  color: skyblue; 
+  padding: 5px;
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px; 
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px;
+  margin-right:-4px;
+}
+.main-button:hover{
+  color:white;
+  background-color: skyblue;
+}
+
+.banner-font{
+  font-size: 20px;
+}
+
+.recommend-result{
+  margin: 30px;
+}
+
+@font-face {
+  font-family: 'Cafe24SsurroundAir';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.loading{
+  font-family:'Cafe24SsurroundAir';
+  margin: 20px;
 }
